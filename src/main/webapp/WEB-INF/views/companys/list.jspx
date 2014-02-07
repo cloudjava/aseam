@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_stag_aseam_domain_Company" items="${companys}" z="8YxhIi72sFq31FJmfvgnr6r0mSg=">
+        <table:table data="${companys}" id="l_com_stag_aseam_domain_Company" path="/companys" z="Suyy3qv+3L8bBhl2o+dthkZAzfo=">
+            <table:column id="c_com_stag_aseam_domain_Company_companyId" property="companyId" z="TSXzTOg8K9bzS4grJ1kP9nehtXo="/>
+            <table:column id="c_com_stag_aseam_domain_Company_companyName" property="companyName" z="EE6d3Rma4GVV3Clq8Eht3s0bYZM="/>
+            <table:column id="c_com_stag_aseam_domain_Company_companyStatus" property="companyStatus" z="IE6L0OtsGlme6+j+kn5aV55hddg="/>
+            <table:column id="c_com_stag_aseam_domain_Company_parentCompany" property="parentCompany" z="cxdfeH2ln3odEEAZfF3I6awNdtI="/>
+            <table:column id="c_com_stag_aseam_domain_Company_pic" property="pic" z="Bhsx6O7r2TcByMsmRKPWF7y08Hs="/>
+        </table:table>
+    </page:list>
+</div>

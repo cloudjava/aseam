@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_stag_aseam_domain_Account" items="${accounts}" z="MOTNoobp7d850E6L3gkLDuBqJTY=">
+        <table:table data="${accounts}" id="l_com_stag_aseam_domain_Account" path="/accounts" z="nB0LqRm7JKNsbdIHX2wMK4OTp7U=">
+            <table:column id="c_com_stag_aseam_domain_Account_userName" property="userName" z="Iz8T8jaPU0VF2b4ukl1jn8KR2dQ="/>
+            <table:column id="c_com_stag_aseam_domain_Account_password" property="password" z="iTeWsOd61bfQUQYbiXtQWKZ6H3E="/>
+            <table:column id="c_com_stag_aseam_domain_Account_enabled" property="enabled" z="OWmX/mBWS1HVAlupx8wBLO8yr0U="/>
+            <table:column id="c_com_stag_aseam_domain_Account_cellPhone" property="cellPhone" z="SKkTscOy38kyPmYL7y73MtR/x90="/>
+            <table:column id="c_com_stag_aseam_domain_Account_email" property="email" z="Mlfhxv75kYN/a3mWBZ0dsoiUUdQ="/>
+            <table:column id="c_com_stag_aseam_domain_Account_memo" property="memo" z="0NHTQHdMBGN6V4bsB8Qp1+qTDtc="/>
+        </table:table>
+    </page:list>
+</div>

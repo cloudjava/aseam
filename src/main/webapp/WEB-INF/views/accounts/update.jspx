@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_stag_aseam_domain_Account" modelAttribute="account" path="/accounts" versionField="Version" z="FkZLwJ5EBbAlycm8h4neyN+KSbA=">
+        <field:input field="userName" id="c_com_stag_aseam_domain_Account_userName" max="30" min="5" required="true" z="zsM4fee4f+JKhHDkx1If4ZnKnew="/>
+        <field:input field="password" id="c_com_stag_aseam_domain_Account_password" max="30" min="3" required="true" z="VC/6ukkGFFHDdTyCzYAcTlU66jA="/>
+        <field:checkbox field="enabled" id="c_com_stag_aseam_domain_Account_enabled" z="2n1fEfcKWTVGoO5jAome1DjGmf0="/>
+        <field:input field="cellPhone" id="c_com_stag_aseam_domain_Account_cellPhone" z="xZWCtrnYLecB2HEp6reWUzaY0Wo="/>
+        <field:input field="email" id="c_com_stag_aseam_domain_Account_email" validationMessageCode="field_invalid_email" validationRegex="[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z0-9]+" z="zXAfNl48M5zv8ZGL2wIBDQ6rQxU="/>
+        <field:input field="memo" id="c_com_stag_aseam_domain_Account_memo" z="N9rgb22uqyrIDdchBC29b45unNA="/>
+    </form:update>
+</div>

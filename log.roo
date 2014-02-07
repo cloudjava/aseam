@@ -1,0 +1,38 @@
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-02-07 15:11:01
+project --topLevelPackage com.stag.aseam
+jpa setup --provider HIBERNATE --database mysql --hostName localhost --databaseName aseam --userName aseam --password as
+jpa setup --provider HIBERNATE --database mysql --hostName localhost --databaseName aseam --userName aseam --password as
+jpa setup --provider HIBERNATE --database mysql --hostName localhost --databaseName aseam --userName aseam --password aseam
+// [failed] entity jpa --class ~.domain.User  --sequenceName USER_SEQ
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-02-07 15:30:21
+entity jpa --class ~.domain.Account  --sequenceName USER_SEQ
+field string --fieldName userName --notNull --unique --sizeMin 5 --sizeMax 30 --class ~.domain.Account
+field string --fieldName password --notNull --sizeMin 3 --sizeMax 30
+field boolean --fieldName enabled --notNull
+field string --fieldName cellPhone
+field string --fieldName email --regexp "[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+"
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-02-07 15:35:19
+web mvc setup
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2014-02-07 15:44:39
+security setup
+logging setup --level INFO
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2014-02-07 15:48:55
+enum type --class ~.reference.companyStatus
+enum constant --name RUNNING
+enum constant --name SUSPENDED
+enum type --class ~.reference.CompanyStatus
+enum constant --name RUNNING
+enum constant --name SUSPENDED
+entity jpa --class ~.domain.Company  --sequenceName COMPANY_SEQ
+field string --fieldName companyId --notNull --unique --sizeMin 3 --sizeMax 30 --class ~.domain.Company
+field string --fieldName companyName --notNull --sizeMax 50
+field enum --fieldName companyStatus --type ~.reference.CompanyStatus --notNull
+field reference --fieldName parentCompany --type ~.domain.Company --cardinality MANY_TO_ONE --fetch LAZY
+field reference --fieldName pic --type ~.domain.Account --cardinality MANY_TO_ONE --fetch LAZY
+web mvc scaffold ~.web.CompanyController
+field string --fieldName memo  --class ~.domain.Account
+web mvc scaffold ~.web.AccountController
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-02-07 16:10:51
+exit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-02-07 16:10:54
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-02-07 16:18:00
